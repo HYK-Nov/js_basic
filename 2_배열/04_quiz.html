@@ -1,0 +1,13 @@
+<script>
+    let idolArr = ['사쿠라', '김채원', '카즈하', '허윤진', '홍은채'];
+    let memberName = prompt('삭제할 멤버 이름을 적어주세요.');
+    alert(memberName);
+
+    while (idolArr.indexOf(memberName) < 0) {
+        console.log(`${memberName}은 잘못된 이름입니다.`);
+        memberName = prompt('다시 삭제할 멤버 이름을 적어주세요.');
+    }
+
+    idolArr.splice(idolArr.indexOf(memberName), 1);
+    console.log(idolArr);
+</script>
