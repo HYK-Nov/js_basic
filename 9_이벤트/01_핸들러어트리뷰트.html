@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background: orange;
+            margin: 20px;
+        }
+
+        .box.red {
+            background: red;
+        }
+
+        .box.green {
+            background: yellowgreen;
+            font-size: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box" onclick="alert('첫 번째 박스 클릭함.');"></div>
+    <div class="box red" ondblclick="widthDouble();"></div>
+    <div class="box green" onmouseover="textHello();" onmouseout="removeHello();"></div>
+
+    <script>
+        function widthDouble() {
+            const $redBox = document.querySelector(".red");
+            $redBox.style.width = '200px';
+        }
+        function textHello() {
+            const $greenBox = document.querySelector(".green");
+            $greenBox.textContent = "안녕";
+        }
+        const removeHello = () => {
+            const $greenBox = document.querySelector(".green");
+            $greenBox.textContent = "";
+        }
+    </script>
+</body>
+
+</html>

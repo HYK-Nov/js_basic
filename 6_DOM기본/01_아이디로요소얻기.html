@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+        <li id="apple">사과</li>
+        <li id="banana" style="background: greenyellow;">바나나</li>
+        <li id="grape">포도</li>
+        <li id="peach">복숭아</li>
+    </ul>
+
+    <script>
+        const $banana = document.getElementById("banana");
+        console.log($banana);
+
+        $banana.style.background = 'red';
+        $banana.style.width = "200px";
+
+        const $peach = document.querySelector("#peach");
+        $peach.style.color = "pink";
+    </script>
+</body>
+
+</html>
