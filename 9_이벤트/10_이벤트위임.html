@@ -56,7 +56,7 @@
                 }
             }
         };
-
+        const $msg = document.querySelector('#msg');
         $fruits.onclick = (e) => {
             console.log(e.target.matches('#fruits li'));
             if (!(e.target.matches('#fruits li'))) {
@@ -70,9 +70,26 @@
             e.target.classList.add('active');
 
             // 3. 텍스트를 em.msg로 복사
-            const $msg = document.querySelector('#msg');
             $msg.textContent = e.target.textContent;
         };
+
+        const $addBtn = document.getElementById('add');
+        const $textInput = document.querySelector('.text-box');
+
+        function makeNewFruit() {
+            console.log(`${$textInput.value}`);
+
+            const $newLi = document.createElement('li');
+            $newLi.textContent = $textInput.value;
+            $newLi.setAttribute('id', `${$textInput.value.toLowerCase()}`);
+
+            if (!($textInput.value === '')) {
+                $fruits.appendChild($newLi);
+                $textInput.value = '';
+            }
+        }
+
+        $addBtn.onclick = makeNewFruit;
     </script>
 </body>
 
