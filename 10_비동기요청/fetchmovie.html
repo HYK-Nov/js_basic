@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+    1. 영진위 API 일일박스 오피스 2023-05-05 정보 얻어서
+    console에 찍어주는 함수 getBoxOffice() 선언 
+
+    2. 버튼을 만들고 onclick 이벤트로 해당 함수를 연결
+
+    3. 비동기식으로 요청이 들어가는지 체크-->
+    <button id="getBoxOffice">함수 실행</button>
+    <script src="fetchmovie.js"></script>
+    <script>
+        const $button = document.querySelector("#getBoxOffice");
+        $button.addEventListener("click", getBoxOffice);
+    </script>
+</body>
+
+</html>

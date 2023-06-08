@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="getPersonList">데이터 가져오기</button>
+
+    <script src="fetchboot.js"></script> <!-- 외부 js파일 임포트 -->
+    <script>
+        const $button = document.querySelector("#getPersonList");
+
+        // 선언해둔 loadPersonList() 함수 호출
+        // loadPersonList()로 대입시, 실행 결과 자료를 해당 위치에 대입
+        $button.addEventListener("click", loadPersonList);
+    </script>
+</body>
+
+</html>
